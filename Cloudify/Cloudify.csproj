@@ -134,8 +134,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BusinessLogic\placeholder.txt" />
-    <Content Include="Controllers\placeholder.txt" />
     <Content Include="Global.asax" />
     <Content Include="Models\placeholder.txt" />
     <Content Include="Web.config" />
@@ -144,10 +142,14 @@
     <Compile Include="API\WordsController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BusinessLogic\IWordService.cs" />
+    <Compile Include="BusinessLogic\WordService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HelperClasses\IRequestHelper.cs" />
+    <Compile Include="HelperClasses\RequestHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
