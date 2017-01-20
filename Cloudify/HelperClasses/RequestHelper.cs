@@ -41,7 +41,12 @@ namespace Cloudify.HelperClasses
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     StreamReader reader = new StreamReader(response.GetResponseStream());
-                    return reader.ReadToEnd();
+                    string data = reader.ReadToEnd();
+
+                    response.Close();
+                    reader.Close();
+
+                    return data;
                 }
                 else
                 {

@@ -44,7 +44,7 @@ namespace Cloudify.API
             // Fetch the html at the specified url, and get a collection of most used words.
             IEnumerable<string> words = _wordService.GetWords(url);
 
-            return Ok();
+            return Ok(words);
         }
     }
 }
