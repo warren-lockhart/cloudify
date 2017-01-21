@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using Cloudify.BusinessLogic;
+using Cloudify.Models;
 
 namespace Cloudify.API
 {
@@ -42,7 +43,7 @@ namespace Cloudify.API
             }
 
             // Fetch the html at the specified url, and get a collection of most used words.
-            IEnumerable<string> words = _wordService.GetWords(url);
+            IEnumerable<Word> words = _wordService.GetWords(url);
 
             return Ok(words);
         }

@@ -1,0 +1,16 @@
+﻿body{
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main{
+    width : 50%;
+    margin: auto;
+}
+
+h1, h2, p{
+    text-align : center;
+}
+
+input, button{
+    margin: 5px;
+}

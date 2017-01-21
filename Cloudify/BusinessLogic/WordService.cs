@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using Cloudify.HelperClasses;
+using Cloudify.Models;
 using CsQuery;
 
 namespace Cloudify.BusinessLogic
@@ -122,13 +123,19 @@ namespace Cloudify.BusinessLogic
         /// <param name="items">The items.</param>
         /// <param name="num">The ranking criterion.</param>
         /// <returns>The reduced size collection.</returns>
-        private IEnumerable<T> GetTopOccurring<T>(IEnumerable<T> items, int num)
+        private IEnumerable<Word> GetTopOccurring(IEnumerable<string> items, int num)
         {
             // Remove all but top 'num' most occurring words.
             var grouped = items.GroupBy(word => word).OrderByDescending(word => word.Count()).Take(num);
 
-            // Flatten the grouping back into a collection.
-            return grouped.SelectMany(group => group);
+            return grouped.Select(item =>
+            {
+                return new Word
+                {
+                    text = item.Key,
+                    weight = item.Count()
+                };
+            });
         }
 
         /// <summary>
@@ -138,14 +145,14 @@ namespace Cloudify.BusinessLogic
         /// </summary>
         /// <param name="url">The specified url.</param>
         /// <returns>The collection of words.</returns>
-        public IEnumerable<string> GetWords(string url)
+        public IEnumerable<Word> GetWords(string url)
         {
             string html = _requestHelper.Get(url);
 
             // We don't bother parsing an empty html string.
             if (string.IsNullOrWhiteSpace(html))
             {
-                return Enumerable.Empty<string>();
+                return Enumerable.Empty<Word>();
             }
 
             List<string> words = new List<string>();

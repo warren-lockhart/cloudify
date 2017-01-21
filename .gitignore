@@ -138,25 +138,7 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-##############################################################
-# General project items
-##############################################################
-
-Backups/
-/Source/Website/assets/images/Cached
-/Source/Website/media/
-/Source/Website/App_Data/
-
-##############################################################
-# Frontend specific ignores
-##############################################################
-
-*.map
-**/svg/min/
-*/css/*.css
-*/css/partials/external/
-*/scripts/*.js
-*/scripts/libraries/
-*/images/sprite.svg
+# Js dependencies
+bower_components/
 
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Cloudify.Models;
 
 namespace Cloudify.BusinessLogic
 {
@@ -14,6 +15,6 @@ namespace Cloudify.BusinessLogic
         /// </summary>
         /// <param name="url">The specified url.</param>
         /// <returns>The collection of words.</returns>
-        IEnumerable<string> GetWords(string url);
+        IEnumerable<Word> GetWords(string url);
     }
 }
