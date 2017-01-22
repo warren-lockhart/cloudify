@@ -1,15 +1,17 @@
 ﻿<div id="main">
-    <h1>Cloudify</h1>
+    <div id="spinner" class="spinner">
+        <img id="img-spinner" src="~/Images/ajax-loader.gif" alt="Loading" />
+    </div>
+
+    <a href="/"><h1>Cloudify</h1></a>
     <h2>You give me a url, I give you a word cloud.</h2>
 
     <div>
-        <p id="message">Enter a url in the input box</p>
+        <p id="message">Enter a url into the box, and hit Create Cloud</p>
     </div>
     <div>
         <input id="url-input" />
-    </div>
-    <div>
-        <button id="url-submit" type="submit">Create Cloud</button>
+        <button id="url-submit" class="btn btn-primary btn-raised" type="submit">Create Cloud</button>
     </div>
 
     <div id="word-cloud">

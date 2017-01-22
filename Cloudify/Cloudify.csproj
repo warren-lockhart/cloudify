@@ -140,6 +140,7 @@
   <ItemGroup>
     <Content Include="CSS\Styles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ajax-loader.gif" />
     <Content Include="Scripts\Cloudify.js" />
     <Content Include="Web.config" />
   </ItemGroup>

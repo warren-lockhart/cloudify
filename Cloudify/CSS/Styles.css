@@ -1,9 +1,10 @@
 ﻿body{
     font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color : aliceblue;
 }
 
 #main{
-    width : 50%;
+    width : 60%;
     margin: auto;
 }
 
@@ -11,6 +12,42 @@ h1, h2, p{
     text-align : center;
 }
 
-input, button{
-    margin: 5px;
+#message{
+    margin: auto;
+    margin-top : 20px;
+    margin-bottom : 20px;
+    background-color : #dff0d8;
+    width: 40%;
+    padding: 10px;
+}
+
+input{
+    display : block;
+    margin: auto;
+    margin-bottom : 10px;
+    width: 60%;
+}
+
+#word-cloud{
+    margin : auto;
+}
+
+button{
+    display : block !important;
+    width: 30%;
+    margin : auto;
+}
+
+.spinner {
+    display : none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* half width of the spinner gif */
+    margin-top: -50px; /* half height of the spinner gif */
+    text-align:center;
+    z-index:1234;
+    overflow: auto;
+    width: 100px; /* width of the spinner gif */
+    height: 102px; /*hight of the spinner gif +2px to fix IE8 issue */
 }
